@@ -76,7 +76,7 @@ class RedactingFormatter(logging.Formatter):
         return txt
 
 
-if __name__ == "__main__":
+def main():
     """Logs the information about user records in a table.
     """
     fields = (name, email, phone, ssn, password, ip, last_login, user_agent,)
@@ -94,3 +94,7 @@ if __name__ == "__main__":
             args = ("user_data", logging.INFO, None, None, msg, None, None)
             log_record = logging.LogRecord(*args)
             info_logger.handle(log_record)
+
+
+if __name__ == "__main__":
+    main()
