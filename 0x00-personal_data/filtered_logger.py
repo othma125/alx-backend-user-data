@@ -9,6 +9,7 @@ import os
 import re
 from typing import List
 import mysql.connector
+from typing import NoReturn
 
 PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 
@@ -68,7 +69,7 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
     return conn
 
 
-def main() -> None:
+def main() -> NoReturn:
     """ Implement a main function
     """
     db = get_db()
