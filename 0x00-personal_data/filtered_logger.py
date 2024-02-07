@@ -5,7 +5,7 @@ import os
 import re
 import logging
 import mysql.connector
-from typing import List
+from typing import List, NoReturn
 
 
 patterns = {
@@ -74,7 +74,7 @@ class RedactingFormatter(logging.Formatter):
         return txt
 
 
-def main():
+def main() -> NoReturn:
     """Logs the information about user records in a table.
     """
     fields = "name,email,phone,ssn,password,ip,last_login,user_agent"
